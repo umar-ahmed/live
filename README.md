@@ -4,7 +4,7 @@ This repo contains the project files from our informal live sessions on Discord.
 
 ## Schedule
 
-| Date            | Series                         | Top                                           |
+| Date            | Series                         | Topic                                         |
 | --------------- | ------------------------------ | --------------------------------------------- |
 | Thu Jan 7, 2021 | *Recreating YouTube Home Page* | Part 1: Header                                |
 | Fri Jan 8, 2021 | *Recreating YouTube Home Page* | Part 2: Improving Header and Starting on Body |
