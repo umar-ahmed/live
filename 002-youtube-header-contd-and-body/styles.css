@@ -1,0 +1,138 @@
+html,
+body {
+  margin: 0;
+  font-family: "Roboto", "Noto", sans-serif;
+  font-size: 16px;
+}
+
+.header {
+  background-color: #202020;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+  height: 56px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* .icon {
+  padding: 8px;
+  margin-right: 16px;
+} */
+
+#start {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(44, 44, 44);
+  border-radius: 4px;
+  padding: 10px;
+  width: 500px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  border: 1px solid #1c62b9;
+}
+
+.search-input::placeholder {
+  color: rgb(172, 172, 172);
+}
+
+#center {
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  background-color: rgb(56, 56, 56);
+  color: rgb(172, 172, 172);
+  border: none;
+  padding: 5px 24px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+#end {
+  display: flex;
+  align-items: center;
+}
+
+#end > * + * {
+  margin-left: 16px;
+}
+
+.topics {
+  background: rgba(32, 32, 32, 1);
+  color: white;
+}
+
+.topics-nav {
+  display: flex;
+  align-items: center;
+}
+
+.btn-topics {
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  color: white;
+}
+
+.topics-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-grow: 1;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.topics-list-item {
+  padding: 8px 20px;
+  background: rgba(55, 55, 55, 1);
+  border: 1px solid rgb(88, 88, 88);
+  border-radius: 18px; /* TODO: Be smarter */
+  height: 18px;
+}
+
+.topics-list-item.active {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.topics-list-item.active > a {
+  color: black;
+}
+
+/* every list item that's not active, apply these styles on hover */
+.topics-list-item:not(.active):hover {
+  background: rgb(94, 94, 94);
+  border: 1px solid rgb(141, 141, 141);
+}
+
+.topics-list-item > a {
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+
+.topics-list > .topics-list-item + .topics-list-item {
+  margin-left: 8px;
+}
