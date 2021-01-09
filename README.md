@@ -8,4 +8,4 @@ This repo contains the project files from our informal live sessions on Discord.
 | --------------- | ------------------------------ | --------------------------------------------- |
 | Thu Jan 7, 2021 | *Recreating YouTube Home Page* | Part 1: Header                                |
 | Fri Jan 8, 2021 | *Recreating YouTube Home Page* | Part 2: Improving Header and Starting on Body |
-| Sat Jan 9, 2021 | *Recreating YouTube Home Page* | Part 3: *TBA*                                 |
+| Sat Jan 9, 2021 | *Recreating YouTube Home Page* | Part 3: Finishing Body & Refactoring CSS      |
