@@ -1,0 +1,246 @@
+html,
+body {
+  margin: 0;
+  font-family: "Roboto", "Noto", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-color: #202020;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+  height: 56px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-small {
+  width: 18px;
+  height: 18px;
+}
+
+/* .icon {
+  padding: 8px;
+  margin-right: 16px;
+} */
+
+#start {
+  display: flex;
+  align-items: center;
+}
+
+#start > * + * {
+  margin-left: 10px;
+}
+
+.search-input {
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(44, 44, 44);
+  border-radius: 4px;
+  padding: 10px;
+  width: 500px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  border: 1px solid #1c62b9;
+}
+
+.search-input::placeholder {
+  color: rgb(172, 172, 172);
+}
+
+#center {
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  background-color: rgb(56, 56, 56);
+  color: rgb(172, 172, 172);
+  border: none;
+  padding: 5px 24px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+#end {
+  display: flex;
+  align-items: center;
+}
+
+#end > * + * {
+  margin-left: 16px;
+}
+
+.topics {
+  background: rgba(32, 32, 32, 1);
+  color: white;
+  border-bottom: 1px solid rgb(59, 59, 59);
+}
+
+.topics-nav {
+  display: flex;
+  align-items: center;
+}
+
+.btn-topics {
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  color: white;
+}
+
+.topics-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-grow: 1;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.topics-list-item {
+  padding: 8px 20px;
+  background: rgba(55, 55, 55, 1);
+  border: 1px solid rgb(88, 88, 88);
+  border-radius: 18px; /* TODO: Be smarter */
+  height: 18px;
+}
+
+.topics-list-item.active {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.topics-list-item.active > a {
+  color: black;
+}
+
+/* every list item that's not active, apply these styles on hover */
+.topics-list-item:not(.active):hover {
+  background: rgb(94, 94, 94);
+  border: 1px solid rgb(141, 141, 141);
+}
+
+.topics-list-item > a {
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+
+.topics-list > .topics-list-item + .topics-list-item {
+  margin-left: 8px;
+}
+
+.recommended {
+  padding: 20px;
+  background: rgba(32, 32, 32, 1);
+  color: white;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card-thumbnail {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.video-card-thumbnail > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-card-timestamp {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  padding: 4px;
+  background-color: rgb(44, 44, 44);
+  font-size: 14px;
+}
+
+.video-card-details {
+  display: flex;
+}
+
+.video-card-details > * + * {
+  margin-left: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.video-card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.video-card-info > * + * {
+  margin-top: 10px;
+}
+
+.video-card-info > h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.video-card-info > p {
+  margin: 0;
+}
+
+.video-card-info-author {
+  display: flex;
+  align-items: center;
+  color: rgb(209, 209, 209);
+}
+
+.video-card-info-author > span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.video-card-info-author > * + * {
+  margin-left: 5px;
+}
+
+.video-card-stats {
+  color: rgb(209, 209, 209);
+}
