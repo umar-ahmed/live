@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning about Web Workers</title>
+  </head>
+  <body>
+    <h1>Web Workers API Test</h1>
+    <button id="run-worker">Run worker</button>
+    <button id="fetch-data">Fetch data</button>
+    <script>
+      const runWorkerButton = document.getElementById("run-worker");
+      const fetchDataButton = document.getElementById("fetch-data");
+      // const worker = new Worker("worker.js");
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", async function () {
+          try {
+            const registration = await navigator.serviceWorker.register(
+              "sw.js"
+            );
+            // Registration was successful
+            console.log(
+              "ServiceWorker registration successful with scope: ",
+              registration.scope
+            );
+          } catch (err) {
+            // registration failed :(
+            console.log("ServiceWorker registration failed: ", err);
+          }
+        });
+      }
+
+      // runWorkerButton.addEventListener("click", () => {
+      //   worker.postMessage({ type: "fibonacci" });
+      // });
+
+      // worker.addEventListener("message", (e) => {
+      //   console.log("Result from worker", e.data);
+      // });
+
+      fetchDataButton.addEventListener("click", async () => {
+        const res = await fetch("/workers/fibonacci");
+
+        console.log("result", res)
+      })
+    </script>
+  </body>
+</html>
